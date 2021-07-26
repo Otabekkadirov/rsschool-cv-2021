@@ -246,31 +246,25 @@
 					order.
 				</p>
 				<pre>
-					<code>
-						arrayDiff([1,2],[1]) == [2]
-					</code>
+					<code>arrayDiff([1,2],[1]) == [2]</code>
 				</pre>
 				<p>If a value is present in <b>b</b>, all of its occurrences must be removed from the other:</p>
 				<pre>
-					<code>
-						arrayDiff([1,2,2,2,3],[2]) == [1,3]
-					</code>
+					<code>arrayDiff([1,2,2,2,3],[2]) == [1,3]</code>
 				</pre>
 				<h4>My solution:</h4>
 
 				<pre>
-					<code>
-						function arrayDiff(a, b) {
-							b.forEach((el) => {
-								let currentIndex = a.indexOf(el);
-								while(currentIndex !== -1) {
-									a.splice(currentIndex, 1);
-									currentIndex = a.indexOf(el);
-								}
-							})
-							return a;
-						}
-					</code>
+<code>function arrayDiff(a, b) {
+	b.forEach((el) => {
+		let currentIndex = a.indexOf(el);
+		while(currentIndex !== -1) {
+			a.splice(currentIndex, 1);
+			currentIndex = a.indexOf(el);
+		}
+	})
+	return a;
+}</code>
 				</pre>
 			</section>
 
